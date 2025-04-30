@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXE | Premium Car Showroom</title>
+    <meta name="description" content="Experience luxury vehicles at LUXE Car Showroom">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://img.icons8.com/ios-filled/50/000000/car--v1.png" type="image/x-icon">
+</head>
+<body class="bg-gray-100 font-montserrat">
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 z-50 flex items-center justify-center bg-black">
+        <div class="flex space-x-4 animate-pulse">
+            <div class="w-12 h-12 bg-yellow-500 rounded-full"></div>
+            <div class="w-12 h-12 bg-yellow-500 rounded-full"></div>
+            <div class="w-12 h-12 bg-yellow-500 rounded-full"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed z-40 w-full text-white transition-all duration-500 bg-black bg-opacity-90">
+        <div class="container flex items-center justify-between px-6 py-4 mx-auto">
+            <a href="#" class="text-2xl font-bold tracking-wider font-playfair">LUXE</a>
+            
+            <div class="hidden space-x-10 md:flex">
+                <a href="#home" class="transition nav-link hover:text-yellow-400">Home</a>
+                <a href="#showcase" class="transition nav-link hover:text-yellow-400">Showcase</a>
+                <a href="#inventory" class="transition nav-link hover:text-yellow-400">Inventory</a>
+                <a href="#about" class="transition nav-link hover:text-yellow-400">About</a>
+                <a href="#contact" class="transition nav-link hover:text-yellow-400">Contact</a>
+            </div>
+            
+            <div class="hidden md:block">
+                <button class="px-6 py-2 font-medium text-black transition bg-yellow-500 rounded-full hover:bg-yellow-600">Book Test Drive</button>
+            </div>
+            
+            <button id="mobile-menu-button" class="text-white md:hidden focus:outline-none">
+                <i class="text-2xl fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden px-6 pb-4 bg-black md:hidden bg-opacity-95">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="transition nav-link hover:text-yellow-400">Home</a>
+                <a href="#showcase" class="transition nav-link hover:text-yellow-400">Showcase</a>
+                <a href="#inventory" class="transition nav-link hover:text-yellow-400">Inventory</a>
+                <a href="#about" class="transition nav-link hover:text-yellow-400">About</a>
+                <a href="#contact" class="transition nav-link hover:text-yellow-400">Contact</a>
+                <button class="w-full px-6 py-2 font-medium text-black transition bg-yellow-500 rounded-full hover:bg-yellow-600">Book Test Drive</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative flex items-center justify-center h-screen overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <video autoplay muted loop class="absolute object-cover w-full h-full">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-sports-car-driving-fast-on-a-race-track-43755-large.mp4" type="video/mp4">
+        </video>
+        
+        <div class="container z-10 px-6 mx-auto text-center text-white">
+            <h1 class="mb-6 text-4xl font-bold hero-title md:text-6xl lg:text-7xl font-playfair">Experience Automotive Excellence</h1>
+            <p class="max-w-3xl mx-auto mb-10 text-lg hero-subtitle md:text-xl lg:text-2xl">Discover the pinnacle of luxury and performance with our exclusive collection of premium vehicles.</p>
+            <div class="flex flex-col justify-center gap-4 sm:flex-row">
+                <button class="px-8 py-3 font-medium text-black transition transform bg-yellow-500 rounded-full hover:bg-yellow-600 hover:scale-105">Explore Collection</button>
+                <button class="px-8 py-3 font-medium text-white transition transform bg-transparent border-2 border-white rounded-full hover:bg-white hover:text-black hover:scale-105">Virtual Tour</button>
+            </div>
+        </div>
+        
+        <div class="absolute transform -translate-x-1/2 bottom-10 left-1/2 animate-bounce">
+            <a href="#showcase" class="text-3xl text-white"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <!-- Showcase Section -->
+    <section id="showcase" class="py-20 text-white bg-gray-900">
+        <div class="container px-6 mx-auto">
+            <div class="mb-16 text-center">
+                <h2 class="mb-4 text-3xl font-bold section-title md:text-4xl lg:text-5xl font-playfair">Featured Masterpieces</h2>
+                <p class="max-w-2xl mx-auto text-gray-300">Curated selection of the world's most prestigious automobiles</p>
+            </div>
+            
+            <div class="grid grid-cols-1 gap-8 showcase-grid md:grid-cols-2 lg:grid-cols-3">
+                <!-- Car 1 -->
+                <div class="overflow-hidden transition duration-500 transform bg-gray-800 showcase-item rounded-xl hover:scale-105 hover:shadow-2xl">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80" 
+                             alt="Luxury Car 1" class="object-cover w-full h-full transition duration-700 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-xl font-bold">2023 Bentley Continental GT</h3>
+                            <p class="text-yellow-400">Starting at $202,500</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <span class="text-gray-400"><i class="mr-2 fas fa-tachometer-alt"></i>3.5s</span>
+                                <span class="ml-4 text-gray-400"><i class="mr-2 fas fa-gas-pump"></i>18mpg</span>
+                            </div>
+                            <span class="text-yellow-400"><i class="mr-1 fas fa-star"></i>5.0</span>
+                        </div>
+                        <button class="w-full py-2 font-medium text-black transition bg-yellow-500 rounded-lg hover:bg-yellow-600">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Car 2 -->
+                <div class="overflow-hidden transition duration-500 transform bg-gray-800 showcase-item rounded-xl hover:scale-105 hover:shadow-2xl">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Luxury Car 2" class="object-cover w-full h-full transition duration-700 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-xl font-bold">2023 Porsche 911 Turbo S</h3>
+                            <p class="text-yellow-400">Starting at $207,000</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <span class="text-gray-400"><i class="mr-2 fas fa-tachometer-alt"></i>2.6s</span>
+                                <span class="ml-4 text-gray-400"><i class="mr-2 fas fa-gas-pump"></i>20mpg</span>
+                            </div>
+                            <span class="text-yellow-400"><i class="mr-1 fas fa-star"></i>4.9</span>
+                        </div>
+                        <button class="w-full py-2 font-medium text-black transition bg-yellow-500 rounded-lg hover:bg-yellow-600">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Car 3 -->
+                <div class="overflow-hidden transition duration-500 transform bg-gray-800 showcase-item rounded-xl hover:scale-105 hover:shadow-2xl">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Luxury Car 3" class="object-cover w-full h-full transition duration-700 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-xl font-bold">2023 Lamborghini Aventador</h3>
+                            <p class="text-yellow-400">Starting at $421,321</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <span class="text-gray-400"><i class="mr-2 fas fa-tachometer-alt"></i>2.9s</span>
+                                <span class="ml-4 text-gray-400"><i class="mr-2 fas fa-gas-pump"></i>15mpg</span>
+                            </div>
+                            <span class="text-yellow-400"><i class="mr-1 fas fa-star"></i>5.0</span>
+                        </div>
+                        <button class="w-full py-2 font-medium text-black transition bg-yellow-500 rounded-lg hover:bg-yellow-600">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inventory Section -->
+    <section id="inventory" class="py-20 bg-white">
+        <div class="container px-6 mx-auto">
+            <div class="mb-16 text-center">
+                <h2 class="mb-4 text-3xl font-bold section-title md:text-4xl lg:text-5xl font-playfair">Our Exclusive Inventory</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Browse our collection of the world's finest automobiles</p>
+            </div>
+            
+            <div class="flex justify-center mb-12">
+                <div class="inline-flex rounded-md shadow-sm">
+                    <button class="px-6 py-2 text-sm font-medium text-black bg-yellow-500 rounded-l-lg inventory-filter">All</button>
+                    <button class="px-6 py-2 text-sm font-medium text-gray-700 bg-gray-200 inventory-filter">Supercars</button>
+                    <button class="px-6 py-2 text-sm font-medium text-gray-700 bg-gray-200 inventory-filter">Luxury</button>
+                    <button class="px-6 py-2 text-sm font-medium text-gray-700 bg-gray-200 inventory-filter">SUV</button>
+                    <button class="px-6 py-2 text-sm font-medium text-gray-700 bg-gray-200 rounded-r-lg inventory-filter">Classic</button>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 inventory-container">
+                <!-- Car items will be loaded here via JavaScript -->
+            </div>
+            
+            <div class="mt-12 text-center">
+                <button class="px-8 py-3 font-medium text-white transition bg-black rounded-full load-more hover:bg-gray-800">Load More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-100">
+        <div class="container px-6 mx-auto">
+            <div class="flex flex-col items-center lg:flex-row">
+                <div class="mb-12 lg:w-1/2 lg:mb-0 lg:pr-12 about-content">
+                    <h2 class="mb-6 text-3xl font-bold md:text-4xl lg:text-5xl font-playfair">The LUXE Experience</h2>
+                    <p class="mb-6 text-gray-700">Founded in 2005, LUXE has established itself as the premier destination for automotive connoisseurs seeking the finest vehicles the world has to offer.</p>
+                    <p class="mb-8 text-gray-700">Our showroom in Beverly Hills showcases an ever-evolving collection of the most sought-after luxury and performance vehicles, each meticulously curated for our discerning clientele.</p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="p-6 bg-white rounded-lg shadow-md">
+                            <div class="mb-3 text-3xl text-yellow-500"><i class="fas fa-award"></i></div>
+                            <h3 class="mb-2 font-bold">Award Winning</h3>
+                            <p class="text-sm text-gray-600">5-time Luxury Dealer of the Year</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-lg shadow-md">
+                            <div class="mb-3 text-3xl text-yellow-500"><i class="fas fa-car"></i></div>
+                            <h3 class="mb-2 font-bold">500+ Vehicles</h3>
+                            <p class="text-sm text-gray-600">Largest inventory in California</p>
+                        </div>
+                    </div>
+                    
+                    <button class="px-8 py-3 font-medium text-white transition bg-black rounded-full hover:bg-gray-800">Our Story</button>
+                </div>
+                
+                <div class="lg:w-1/2 about-image">
+                    <div class="relative overflow-hidden shadow-2xl rounded-xl">
+                        <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="LUXE Showroom" class="w-full h-auto rounded-xl">
+                        <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent opacity-30"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 text-white bg-gray-900">
+        <div class="container px-6 mx-auto">
+            <div class="mb-16 text-center">
+                <h2 class="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl font-playfair">Client Experiences</h2>
+                <p class="max-w-2xl mx-auto text-gray-300">What our clients say about us</p>
+            </div>
+            
+            <div class="relative testimonial-slider">
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+                    <!-- Testimonial 1 -->
+                    <div class="p-8 bg-gray-800 rounded-xl testimonial-item">
+                        <div class="flex items-center mb-6">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="w-12 h-12 mr-4 rounded-full">
+                            <div>
+                                <h4 class="font-bold">Michael Johnson</h4>
+                                <p class="text-sm text-yellow-400">Tech Entrepreneur</p>
+                            </div>
+                        </div>
+                        <p class="mb-6 text-gray-300">"The team at LUXE made purchasing my dream car an unforgettable experience. Their attention to detail and customer service is unmatched."</p>
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="p-8 bg-gray-800 rounded-xl testimonial-item">
+                        <div class="flex items-center mb-6">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="w-12 h-12 mr-4 rounded-full">
+                            <div>
+                                <h4 class="font-bold">Sarah Williams</h4>
+                                <p class="text-sm text-yellow-400">Fashion Designer</p>
+                            </div>
+                        </div>
+                        <p class="mb-6 text-gray-300">"I've purchased several cars from LUXE over the years. They consistently exceed my expectations with their knowledge and professionalism."</p>
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="p-8 bg-gray-800 rounded-xl testimonial-item">
+                        <div class="flex items-center mb-6">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Client" class="w-12 h-12 mr-4 rounded-full">
+                            <div>
+                                <h4 class="font-bold">David Chen</h4>
+                                <p class="text-sm text-yellow-400">Investment Banker</p>
+                            </div>
+                        </div>
+                        <p class="mb-6 text-gray-300">"The selection at LUXE is unparalleled. They found me the exact spec I wanted when no one else could. Highly recommended!"</p>
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container px-6 mx-auto">
+            <div class="flex flex-col lg:flex-row">
+                <div class="mb-12 lg:w-1/2 lg:mb-0 lg:pr-12">
+                    <h2 class="mb-6 text-3xl font-bold md:text-4xl lg:text-5xl font-playfair">Visit Our Showroom</h2>
+                    <p class="mb-8 text-gray-700">Schedule a private viewing or test drive at our Beverly Hills location.</p>
+                    
+                    <div class="mb-8">
+                        <div class="flex items-start mb-6">
+                            <div class="mt-1 mr-4 text-xl text-yellow-500"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h3 class="mb-1 font-bold">Address</h3>
+                                <p class="text-gray-600">9400 Wilshire Blvd, Beverly Hills, CA 90212</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="mt-1 mr-4 text-xl text-yellow-500"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <h3 class="mb-1 font-bold">Hours</h3>
+                                <p class="text-gray-600">Monday - Friday: 9:00 AM - 7:00 PM</p>
+                                <p class="text-gray-600">Saturday: 10:00 AM - 6:00 PM</p>
+                                <p class="text-gray-600">Sunday: By appointment only</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="mt-1 mr-4 text-xl text-yellow-500"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <h3 class="mb-1 font-bold">Contact</h3>
+                                <p class="text-gray-600">+1 (310) 555-7878</p>
+                                <p class="text-gray-600">info@luxeshowroom.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4">
+                        <a href="#" class="flex items-center justify-center w-10 h-10 text-gray-700 transition bg-gray-200 rounded-full hover:bg-yellow-500 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="flex items-center justify-center w-10 h-10 text-gray-700 transition bg-gray-200 rounded-full hover:bg-yellow-500 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="flex items-center justify-center w-10 h-10 text-gray-700 transition bg-gray-200 rounded-full hover:bg-yellow-500 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="flex items-center justify-center w-10 h-10 text-gray-700 transition bg-gray-200 rounded-full hover:bg-yellow-500 hover:text-white">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="p-8 shadow-md bg-gray-50 rounded-xl">
+                        <h3 class="mb-6 text-2xl font-bold">Contact Us</h3>
+                        <form id="contact-form">
+                            <div class="mb-6">
+                                <label for="name" class="block mb-2 font-medium text-gray-700">Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent" required>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="email" class="block mb-2 font-medium text-gray-700">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent" required>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="phone" class="block mb-2 font-medium text-gray-700">Phone</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block mb-2 font-medium text-gray-700">Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full py-3 font-medium text-black transition bg-yellow-500 rounded-lg hover:bg-yellow-600">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 text-white bg-black">
+        <div class="container px-6 mx-auto text-center">
+            <h2 class="mb-4 text-2xl font-bold md:text-3xl">Join Our Exclusive Community</h2>
+            <p class="max-w-2xl mx-auto mb-8 text-gray-300">Subscribe to receive updates on new arrivals, private events, and special offers.</p>
+            
+            <div class="flex max-w-md mx-auto">
+                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 text-black rounded-l-lg focus:outline-none">
+                <button class="px-6 py-3 font-medium text-black transition bg-yellow-500 rounded-r-lg hover:bg-yellow-600">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 text-gray-400 bg-gray-900">
+        <div class="container px-6 mx-auto">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-4">
+                <div>
+                    <h3 class="mb-4 text-lg font-bold text-white">LUXE</h3>
+                    <p class="mb-4">The premier destination for automotive excellence and luxury.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 transition hover:text-yellow-500"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 transition hover:text-yellow-500"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 transition hover:text-yellow-500"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 transition hover:text-yellow-500"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="mb-4 text-lg font-bold text-white">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="transition hover:text-yellow-500">Home</a></li>
+                        <li><a href="#showcase" class="transition hover:text-yellow-500">Showcase</a></li>
+                        <li><a href="#inventory" class="transition hover:text-yellow-500">Inventory</a></li>
+                        <li><a href="#about" class="transition hover:text-yellow-500">About Us</a></li>
+                        <li><a href="#contact" class="transition hover:text-yellow-500">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="mb-4 text-lg font-bold text-white">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="transition hover:text-yellow-500">Vehicle Purchase</a></li>
+                        <li><a href="#" class="transition hover:text-yellow-500">Leasing Options</a></li>
+                        <li><a href="#" class="transition hover:text-yellow-500">Trade-In Valuation</a></li>
+                        <li><a href="#" class="transition hover:text-yellow-500">Financing</a></li>
+                        <li><a href="#" class="transition hover:text-yellow-500">Maintenance</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="mb-4 text-lg font-bold text-white">Contact</h3>
+                    <address class="not-italic">
+                        <p class="mb-2">9400 Wilshire Blvd</p>
+                        <p class="mb-2">Beverly Hills, CA 90212</p>
+                        <p class="mb-2">+1 (310) 555-7878</p>
+                        <p class="mb-2">info@luxeshowroom.com</p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="flex flex-col items-center justify-between pt-8 mt-12 border-t border-gray-800 md:flex-row">
+                <p>&copy; 2023 LUXE Showroom. All rights reserved.</p>
+                <div class="flex mt-4 space-x-6 md:mt-0">
+                    <a href="#" class="transition hover:text-yellow-500">Privacy Policy</a>
+                    <a href="#" class="transition hover:text-yellow-500">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed flex items-center justify-center invisible w-12 h-12 text-black transition bg-yellow-500 rounded-full shadow-lg opacity-0 bottom-8 right-8 hover:bg-yellow-600">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="./js/gsap-animations.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
